@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://rvgybpfb1htv"]
+
+[ext_resource type="Texture2D" uid="uid://ckqae1ps6bmlv" path="res://O .png" id="2_fd7nh"]
+
+[sub_resource type="GDScript" id="GDScript_vsnfs"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="O" type="Sprite2D"]
+position = Vector2(521, 234)
+scale = Vector2(0.283203, 0.304688)
+script = SubResource("GDScript_vsnfs")
+
+[node name="O" type="Sprite2D" parent="." groups=["circles"]]
+position = Vector2(1.90735e-06, -1.52588e-05)
+scale = Vector2(0.237931, 0.198718)
+texture = ExtResource("2_fd7nh")

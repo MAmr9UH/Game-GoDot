@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://1wlwbvhtx03n"]
+
+[ext_resource type="Texture2D" uid="uid://b6qxaxm87j8a4" path="res://Colorful Outer Space Illustration Blank Notes A4 Document.png" id="1_fkqsb"]
+
+[node name="Space" type="Sprite2D"]
+position = Vector2(444, 444.5)
+scale = Vector2(0.622348, 0.4435)
+texture = ExtResource("1_fkqsb")
