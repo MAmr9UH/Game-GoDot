@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://vdklukdxvkxb"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(1.0051, 1.00619)

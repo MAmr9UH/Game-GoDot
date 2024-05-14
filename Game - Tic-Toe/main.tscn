@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://db823yfsws1fc"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_qbmyh"]
+[ext_resource type="Texture2D" uid="uid://c8jw64ru1wj6p" path="res://Grid.png" id="2_jtkii"]
+
+[sub_resource type="GDScript" id="GDScript_s0q8x"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="Main" type="Node2D"]
+scale = Vector2(0.867289, 0.949531)
+script = ExtResource("1_qbmyh")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 452.0
+offset_top = 145.0
+offset_right = 845.0
+offset_bottom = 343.0
+scale = Vector2(1.00478, 1.17475)
+pivot_offset = Vector2(-62.316, 59.9388)
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 452.0
+offset_top = 384.0
+offset_right = 843.0
+offset_bottom = 610.0
+scale = Vector2(1.00233, 0.980435)
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+script = SubResource("GDScript_s0q8x")
+
+[node name="Grid" type="Sprite2D" parent="."]
+position = Vector2(576.509, 393.879)
+scale = Vector2(1.05693, 0.726479)
+texture = ExtResource("2_jtkii")
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

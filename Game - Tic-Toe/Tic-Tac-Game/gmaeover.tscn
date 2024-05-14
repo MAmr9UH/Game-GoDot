@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://b505fi7lcvteq"]
+
+[ext_resource type="Script" path="res://Gameover.gd" id="1_wby6e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbte2"]
+bg_color = Color(0.741176, 0.196078, 0.54902, 0.380392)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0.105882, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v86rg"]
+bg_color = Color(0.6, 0.6, 0.470588, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50a1h"]
+bg_color = Color(0.6, 0.227451, 0, 1)
+
+[node name="gmaeover" type="CanvasLayer"]
+script = ExtResource("1_wby6e")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 155.0
+offset_top = 98.0
+offset_right = 858.0
+offset_bottom = 519.0
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_sbte2")
+
+[node name="Rlabel" type="Label" parent="."]
+offset_left = 159.0
+offset_top = 359.0
+offset_right = 855.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(0.67451, 0, 0, 1)
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxFlat_v86rg")
+text = "Player 1 Wins"
+horizontal_alignment = 1
+
+[node name="RestartButton" type="Button" parent="."]
+process_mode = 2
+anchors_preset = -1
+anchor_top = -0.091
+offset_left = 162.0
+offset_top = 172.523
+offset_right = 853.0
+offset_bottom = 233.0
+theme_override_colors/font_color = Color(0.756863, 0.721569, 0.545098, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_50a1h")
+text = "Play Again"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
